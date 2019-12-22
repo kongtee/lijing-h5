@@ -23,10 +23,6 @@ export default new Router({
     linkActiveClass: 'is-active',
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-        {
-            path: '/',
-            meta: {}
-        },
         ...generateRoutesFromMenu(menus.state.items)
     ]
 });

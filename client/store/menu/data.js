@@ -6,7 +6,10 @@ export default [
             expanded: false
         },
         show: false,
-        path: '/'
+        path: '/',
+        component() {
+            return import('@Views/home/index.vue');
+        },
     },
     {
         name: '音频工具',
@@ -15,9 +18,9 @@ export default [
             expanded: false
         },
         show: false,
-        path: '/audio/wave',
+        path: '/',
         component() {
-            return import('@Views/audio/wave.vue');
+            return import('@Views/home/index.vue');
         },
     }
 ];

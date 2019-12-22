@@ -2,7 +2,7 @@
 @file: 主APP引入文件
 -->
 <template>
-    <div id="app" class="pcadmin">
+    <div id="app" class="h5admin">
         <!--顶部导航-->
         <Navbar>
             <!--navbar 内容-->
@@ -31,9 +31,8 @@
 <style lang="less">
 @import './assets/css/index';
 
-.pcadmin {
+.h5admin {
     height: 100vh;
-    .flexbox(column);
 
     .hd {
         height: 100%;
