@@ -25,6 +25,7 @@
             <!--页面内容-->
             <AppMain></AppMain>
         </div>
+        <Footerbar></Footerbar>
     </div>
 </template>
 
@@ -91,14 +92,16 @@ import { mapGetters } from 'vuex';
 import {
     Navbar,
     // Sidebar,
-    AppMain
+    AppMain,
+    Footerbar
 } from './components/layout/index';
 
 export default {
     components: {
         Navbar,
         // Sidebar,
-        AppMain
+        AppMain,
+        Footerbar
     },
     data() {
         return {
