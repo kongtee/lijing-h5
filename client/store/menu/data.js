@@ -12,5 +12,12 @@ export default [
         component() {
             return import('@Views/news/news.vue');
         },
+    },
+    {
+        name: '新闻咨询-详情页',
+        path: '/newsdetail',
+        component() {
+            return import('@Views/news/newsdetail.vue');
+        },
     }
 ];
