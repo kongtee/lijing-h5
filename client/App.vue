@@ -3,26 +3,24 @@
 -->
 <template>
     <div id="app" class="h5admin">
+        <!--侧边栏-->
+        <Sidebar :show="layout.showSidebar" v-if="layout.showSidebar"></Sidebar>
         <!--顶部导航-->
         <Navbar>
             <!--navbar 内容-->
-            <flex-box class="hd" justify="space-between">
-                <flex-box class="logo">
-                    <span class="title">瑞金苏区干部学院|瑞金市政府批准成立</span>
-                </flex-box>
-
-                <flex-box class="cmenus" justify="flex-start">
-                    <!-- <a href="#/">
-                        <span>主页</span>
-                    </a> -->
-                </flex-box>
+            <flex-box class="hd" justify="space-between" v-if="path==='/'">
+                <a class="logo" href="javascript:void(0)" @click="toggleSiderbar()"></a>
+                <div class="title">{{title}}</div>
+            </flex-box>
+            <flex-box class="hd" justify="space-between" v-else>
+                <a class="back" href="javascript:void(0)" @click="back()"></a>
+                <div class="title">{{title}}</div>
+                <a class="logo" href="javascript:void(0)" @click="toggleSiderbar()"></a>
             </flex-box>
             <!--navbar 内容结束-->
         </Navbar>
+        <!--页面内容-->
         <div class="main-content">
-            <!--侧边栏-->
-            <!--<Sidebar :show="layout.showSidebar" v-if="layout.showSidebar"></Sidebar>-->
-            <!--页面内容-->
             <AppMain></AppMain>
         </div>
         <Footerbar></Footerbar>
@@ -30,87 +28,77 @@
 </template>
 
 <style lang="less">
-@import './assets/css/index';
+    @import './assets/css/index';
 
-.h5admin {
-    height: 100vh;
+    .h5admin {
+        height: 100vh;
 
-    .hd {
-        height: 100%;
-        padding: 0 20px;
-        font-size: @body-font-size;
-        .logo {
-            font-size: 20px;
+        .hd {
+            height: 100%;
+            padding: 0 15px;
+            font-size: @body-font-size;
+
+            .logo {
+                background-image: url("./assets/images/menu.png");
+                background-size: 30px;
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+
+            .back {
+                background-image: url("./assets/images/back.png");
+                background-size: 30px;
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
 
             .title {
-                font-size: 30px;
+                font-size: 18px;
                 color: #fff;
-                font-weight: 300;
-                font-family: @body-family;
-            }
-        }
-        .cmenus {
-            .flex(1);
-            height: 100%;
-            a {
-                .center();
-                padding: 0 20px;
-                height: 100%;
-                &:hover {
-                    background-color: whitesmoke;
-                }
-            }
-        }
-        .user-info {
-            .center();
-            .user-tx {
-                width: 44px;
-                height: 44px;
-                overflow: hidden;
-                img {
-                    width: 100%;
-                }
-            }
-            .user-name {
-                font-size: @body-font-size;
                 font-weight: bold;
-                color: #fff;
-                margin: 0 9px;
+                font-family: @body-family;
+                text-align: center;
+                flex: auto;
             }
         }
-    }
 
-    .main-content {
-        .flex(1);
-        .flexbox();
+        .main-content {
+            .flex(1);
+            .flexbox();
+        }
     }
-}
 </style>
 
 <script>
-import { mapGetters } from 'vuex';
-import {
-    Navbar,
-    // Sidebar,
-    AppMain,
-    Footerbar
-} from './components/layout/index';
-
-export default {
-    components: {
+    import { mapGetters, mapActions } from 'vuex';
+    import {
         Navbar,
-        // Sidebar,
+        Sidebar,
         AppMain,
         Footerbar
-    },
-    data() {
-        return {
-        };
-    },
-    computed: {
-        ...mapGetters(['layout'])
-    },
-    mounted() {
-    }
-};
+    } from './components/layout/index';
+
+    export default {
+        components: {
+            Navbar,
+            Sidebar,
+            AppMain,
+            Footerbar
+        },
+        data() {
+            return {
+            };
+        },
+        computed: {
+            ...mapGetters(['layout', 'title', 'path'])
+        },
+        methods: {
+            ...mapActions(['toggleSiderbar']),
+            back() {
+                this.$router.go(-1)
+            }
+        }
+    };
 </script>

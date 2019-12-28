@@ -2,7 +2,7 @@
     <section class="app-footerbar animated slideInDown">
         <ul class="footerbar-list">
             <li>
-                <a href="#">
+                <a href="tel:400-155-1911">
                     <img src="">
                     <span class="footerbar-text">电话</span>
                 </a>
