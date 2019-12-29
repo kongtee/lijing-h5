@@ -4,7 +4,7 @@
 <template>
     <div id="app" class="h5admin">
         <!--侧边栏-->
-        <Sidebar :show="layout.showSidebar" v-if="layout.showSidebar"></Sidebar>
+        <Sidebar :show="layout.showSidebar"></Sidebar>
         <!--顶部导航-->
         <Navbar>
             <!--navbar 内容-->
@@ -23,7 +23,7 @@
         <div class="main-content">
             <AppMain></AppMain>
         </div>
-        <Footerbar></Footerbar>
+        <Footerbar v-if="layout.footerbar"></Footerbar>
     </div>
 </template>
 

@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 const state = {
     layout: {
-        showSidebar: false
+        showSidebar: false,
+        footerbar: true
     },
     title: '瑞金苏区干部学院|瑞金市政府批准成立',
     path: '/'
@@ -35,6 +36,16 @@ const mutations = {
      */
     setPath(state, path) {
         state.path = path;
+    },
+    /**
+     * 设置底bar
+     * @param state
+     * @param isShow
+     */
+    setFooterbar(state, isShow) {
+        console.log('setFooterbar:', isShow)
+        state.layout.footerbar = isShow;
+        console.log('setFooterbar2:', state.layout.footerbar)
     }
 };
 
@@ -52,6 +63,14 @@ const actions = {
      */
     setTitle({ commit }, title) {
         commit('setTitle', title);
+    },
+    /**
+     * 设置底bar
+     * @param commit
+     * @param isShow
+     */
+    setFooterbar({commit}, isShow) {
+        commit('setFooterbar', isShow);
     }
 };
 

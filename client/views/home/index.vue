@@ -19,61 +19,7 @@
         </div>
         <!-- 新闻动态 -->
         <!-- 走进瑞金 -->
-        <div class="section-container">
-            <div class="news-header">
-                <header>走进瑞金</header>
-            </div>
-            <ul class="college-list">
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">瑞金沙洲坝</div>
-                    </a>
-                </li>
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">瑞金"二苏大"</div>
-                    </a>
-                </li>
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">于都</div>
-                    </a>
-                </li>
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">大栢地战斗遗址</div>
-                    </a>
-                </li>
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">古田会议纪念馆</div>
-                    </a>
-                </li>
-                <li class="college-item">
-                    <a class="college-item-wrap" href="#">
-                        <div class="college-item-image">
-                            <img src="@Assets/images/index01.jpg">
-                        </div>
-                        <div class="college-item-content">兴国</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <Ruijin></Ruijin>
         <!-- 走进瑞金 -->
         <!-- 红色回忆 -->
         <div class="section-container">
@@ -164,41 +110,6 @@
             margin: 20px;
             overflow: hidden;
 
-            .college-list {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 15px 0;
-
-                .college-item {
-                    width: 50%;
-                    margin: 15px 0 0;
-
-                    .college-item-wrap {
-                        display: flex;
-                        flex-direction: column;
-                        margin-right: 15px;
-
-                        .college-item-image {
-                            overflow: hidden;
-                            flex-shrink: 0;
-
-                            img {
-                                width: 100%;
-                            }
-                        }
-
-                        .college-item-content {
-                            text-align: center;
-                            font-size: 12px;
-                        }
-                    }
-
-                    .college-item-wrap:nth-child(even) {
-                        margin-right: 0;
-                    }
-                }
-            }
-
             .mem-list {
                 padding: 15px 0;
 
@@ -241,11 +152,13 @@
 <script>
     import NewsList from '../news/newslist';
     import TrainList from '../scheme/trainlist';
+    import Ruijin from '../ruijin/ruijin';
 
     export default {
         components: {
             NewsList,
-            TrainList
+            TrainList,
+            Ruijin
         },
         data() {
             return {};
