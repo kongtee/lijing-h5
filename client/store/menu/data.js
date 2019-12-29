@@ -19,7 +19,18 @@ export default [
         },
         meta: {
             title: '培训方案'
+        }
+    },
+    {
+        name: '媒体介绍',
+        path: '/media',
+        show: true,
+        component() {
+            return import('@Views/media/intro.vue');
         },
+        meta: {
+            title: '媒体介绍'
+        }
     },
     {
         name: '新闻资讯',
@@ -28,6 +39,9 @@ export default [
         component() {
             return import('@Views/news/news.vue');
         },
+        meta: {
+            title: '新闻资讯'
+        }
     },
     {
         name: '新闻资讯-详情页',
@@ -36,5 +50,8 @@ export default [
         component() {
             return import('@Views/news/newsdetail.vue');
         },
+        meta: {
+            title: '新闻资讯-详情页'
+        }
     }
 ];

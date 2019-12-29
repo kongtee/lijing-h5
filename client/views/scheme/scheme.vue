@@ -84,7 +84,6 @@
         methods: {
             ...mapActions(['setFooterbar']),
             init() {
-                console.log('setFooterbar');
                 this.setFooterbar(false);
             }
         }

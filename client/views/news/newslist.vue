@@ -2,7 +2,7 @@
     <div class="news-list-container">
         <ul class="news-list">
             <li class="news-item">
-                <a class="news-item-wrap" href="#/newsdetail">
+                <a class="news-item-wrap" href="#/news/detail">
                     <div class="news-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li class="news-item">
-                <a class="news-item-wrap" href="#/newsdetail">
+                <a class="news-item-wrap" href="#/news/detail">
                     <div class="news-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="news-item">
-                <a class="news-item-wrap" href="#/newsdetail">
+                <a class="news-item-wrap" href="#/news/detail">
                     <div class="news-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -42,12 +42,9 @@
 </template>
 
 <script>
+
     export default {
-        name: "newslist",
-        mounted() {
-        },
-        methods: {
-        }
+        name: "newslist"
     }
 </script>
 

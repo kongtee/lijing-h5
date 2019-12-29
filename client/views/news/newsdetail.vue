@@ -8,8 +8,19 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
-        name: "newsdetail"
+        name: "newsdetail",
+        mounted() {
+            this.init();
+        },
+        methods: {
+            ...mapActions(['setFooterbar']),
+            init() {
+                this.setFooterbar(false);
+            }
+        }
     }
 </script>
 

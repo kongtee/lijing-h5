@@ -5,7 +5,7 @@
         </div>
         <ul class="college-list">
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -13,7 +13,7 @@
                 </a>
             </li>
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="college-item">
-                <a class="college-item-wrap" href="#">
+                <a class="college-item-wrap" href="#/news/detail">
                     <div class="college-item-image">
                         <img src="@Assets/images/index01.jpg">
                     </div>

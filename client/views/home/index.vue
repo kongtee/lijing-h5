@@ -19,32 +19,34 @@
         </div>
         <!-- 新闻动态 -->
         <!-- 走进瑞金 -->
-        <Ruijin></Ruijin>
+        <div class="section-container">
+            <Ruijin></Ruijin>
+        </div>
         <!-- 走进瑞金 -->
-        <!-- 红色回忆 -->
+        <!-- 红色记忆 -->
         <div class="section-container">
             <div class="news-header">
-                <header>红色会议</header>
+                <header>红色记议</header>
             </div>
             <ul class="mem-list">
                 <li class="mem-item">
-                    <a class="mem-item-wrap" href="#">习近平在中央党校（国家行政学院）中青年干部</a>
+                    <a class="mem-item-wrap" href="#/news/detail">习近平在中央党校（国家行政学院）中青年干部</a>
                 </li>
                 <li class="mem-item">
-                    <a class="mem-item-wrap" href="#">红色旧址为青少年成长烙上"税收"印记</a>
+                    <a class="mem-item-wrap" href="#/news/detail">红色旧址为青少年成长烙上"税收"印记</a>
                 </li>
                 <li class="mem-item">
-                    <a class="mem-item-wrap" href="#">从井冈山到延安--毛泽东里奋斗史中的红色血脉</a>
+                    <a class="mem-item-wrap" href="#/news/detail">从井冈山到延安--毛泽东里奋斗史中的红色血脉</a>
                 </li>
                 <li class="mem-item">
-                    <a class="mem-item-wrap" href="#">红色旧址为青少年成长烙上"税收"印记商店还斐林试剂历史记录会计师来得及克里斯杰弗里斯</a>
+                    <a class="mem-item-wrap" href="#/news/detail">红色旧址为青少年成长烙上"税收"印记商店还斐林试剂历史记录会计师来得及克里斯杰弗里斯</a>
                 </li>
                 <li class="mem-item">
-                    <a class="mem-item-wrap" href="#">从井冈山到延安--毛泽东里奋斗史中的红色血脉</a>
+                    <a class="mem-item-wrap" href="#/news/detail">从井冈山到延安--毛泽东里奋斗史中的红色血脉</a>
                 </li>
             </ul>
         </div>
-        <!-- 红色回忆 -->
+        <!-- 红色记忆 -->
         <!-- 培训方案 -->
         <div class="section-container">
             <div class="news-header">
@@ -150,6 +152,7 @@
 </style>
 
 <script>
+    import { mapActions } from 'vuex';
     import NewsList from '../news/newslist';
     import TrainList from '../scheme/trainlist';
     import Ruijin from '../ruijin/ruijin';
@@ -165,8 +168,14 @@
         },
         computed: {},
         mounted() {
+            this.init();
         },
-        methods: {}
+        methods: {
+            ...mapActions(['setFooterbar']),
+            init() {
+                this.setFooterbar(true);
+            }
+        }
     }
 </script>
 

@@ -43,9 +43,7 @@ const mutations = {
      * @param isShow
      */
     setFooterbar(state, isShow) {
-        console.log('setFooterbar:', isShow)
         state.layout.footerbar = isShow;
-        console.log('setFooterbar2:', state.layout.footerbar)
     }
 };
 
