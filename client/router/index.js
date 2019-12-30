@@ -31,11 +31,12 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-    console.log(to.path)
+    console.log(to);
     if (to.meta.title) {
         store.commit('setTitle', to.meta.title);
         store.commit('setPath', to.path);
     }
+    store.commit('setFooterbar', to.meta.footerBar);
     next();
 });
 

@@ -152,7 +152,6 @@
 </style>
 
 <script>
-    import { mapActions } from 'vuex';
     import NewsList from '../news/newslist';
     import TrainList from '../scheme/trainlist';
     import Ruijin from '../ruijin/ruijin';
@@ -162,19 +161,6 @@
             NewsList,
             TrainList,
             Ruijin
-        },
-        data() {
-            return {};
-        },
-        computed: {},
-        mounted() {
-            this.init();
-        },
-        methods: {
-            ...mapActions(['setFooterbar']),
-            init() {
-                this.setFooterbar(true);
-            }
         }
     }
 </script>

@@ -67,6 +67,8 @@
         .main-content {
             .flex(1);
             .flexbox();
+
+            margin-bottom: @footerbarHeight;
         }
     }
 </style>

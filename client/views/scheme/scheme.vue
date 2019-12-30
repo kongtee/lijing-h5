@@ -65,7 +65,6 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex';
     import TrainList from './trainlist';
     import Ruijin from '../ruijin/ruijin';
 
@@ -74,18 +73,6 @@
         components: {
             TrainList,
             Ruijin
-        },
-        data() {
-            return {}
-        },
-        mounted() {
-            this.init();
-        },
-        methods: {
-            ...mapActions(['setFooterbar']),
-            init() {
-                this.setFooterbar(false);
-            }
         }
     }
 </script>

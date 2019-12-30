@@ -44,7 +44,9 @@
         box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
         background-color: #666;
         height: 80px;
-        line-height: 80px;
+        line-height: @footerbarHeight;
+        position: fixed;
+        bottom: 0;
 
         .footerbar-list {
             display: flex;

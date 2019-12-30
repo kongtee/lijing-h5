@@ -38,22 +38,12 @@
 </style>
 
 <script>
-    import { mapActions } from 'vuex';
     import NewsList from '../news/newslist';
 
     export default {
         name: "news",
         components: {
             NewsList
-        },
-        mounted() {
-            this.init();
-        },
-        methods: {
-            ...mapActions(['setFooterbar']),
-            init() {
-                this.setFooterbar(false);
-            }
         }
     }
 </script>

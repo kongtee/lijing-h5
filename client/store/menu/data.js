@@ -4,7 +4,8 @@ export default [
         path: '/',
         show: true,
         meta: {
-            title: '瑞金苏区干部学院|瑞金市政府批准成立'
+            title: '瑞金苏区干部学院|瑞金市政府批准成立',
+            footerBar: true
         },
         component() {
             return import('@Views/home/index.vue');
@@ -18,7 +19,8 @@ export default [
             return import('@Views/scheme/scheme.vue');
         },
         meta: {
-            title: '培训方案'
+            title: '培训方案',
+            footerBar: false
         }
     },
     {
@@ -29,7 +31,8 @@ export default [
             return import('@Views/media/intro.vue');
         },
         meta: {
-            title: '媒体介绍'
+            title: '媒体介绍',
+            footerBar: true
         }
     },
     {
@@ -40,7 +43,8 @@ export default [
             return import('@Views/news/news.vue');
         },
         meta: {
-            title: '新闻资讯'
+            title: '新闻资讯',
+            footerBar: false
         }
     },
     {
@@ -51,7 +55,20 @@ export default [
             return import('@Views/news/newsdetail.vue');
         },
         meta: {
-            title: '新闻资讯-详情页'
+            title: '新闻资讯-详情页',
+            footerBar: false
+        }
+    },
+    {
+        name: '红色文创',
+        path: '/news',
+        show: true,
+        component() {
+            return import('@Views/redculture/index.vue');
+        },
+        meta: {
+            title: '红色文创',
+            footerBar: false
         }
     }
 ];

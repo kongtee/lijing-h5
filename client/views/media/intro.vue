@@ -69,19 +69,8 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex';
-
     export default {
-        name: "intro",
-        mounted() {
-            this.init();
-        },
-        methods: {
-            ...mapActions(['setFooterbar']),
-            init() {
-                this.setFooterbar(true);
-            }
-        }
+        name: "intro"
     }
 </script>
 
