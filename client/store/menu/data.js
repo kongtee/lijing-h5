@@ -70,5 +70,17 @@ export default [
             title: '红色文创',
             footerBar: false
         }
+    },
+    {
+        name: '联系我们',
+        path: '/concat',
+        show: true,
+        component() {
+            return import('@Views/concat/index.vue');
+        },
+        meta: {
+            title: '联系我们',
+            footerBar: true
+        }
     }
 ];
