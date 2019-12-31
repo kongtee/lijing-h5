@@ -61,7 +61,7 @@ export default [
     },
     {
         name: '红色文创',
-        path: '/news',
+        path: '/redculture',
         show: true,
         component() {
             return import('@Views/redculture/index.vue');
