@@ -6,18 +6,17 @@
                 <template v-for="(item, index) in menuItems">
                     <li v-if="item.show" class="siderbar-item">
                         <a class="siderbar-item-link" v-if="!item.subs" href="javascript:void(0)" @click="jump(item.path)">{{ item.name }}</a>
-
-<!--                        <el-submenu v-else :index="'#subm' + index">-->
-<!--                            <template slot="title">-->
-<!--                                <i :class="['icon iconfont', item.meta.icon]"></i>-->
-<!--                                <span>{{ item.name }}</span>-->
-<!--                            </template>-->
-
-<!--                            <el-menu-item v-for="sub in item.subs" :index="'#' + sub.path" v-if="item.show"-->
-<!--                                          @click="jump(sub.path)">-->
-<!--                                {{ sub.name }}-->
-<!--                            </el-menu-item>-->
-<!--                        </el-submenu>-->
+                        <div v-else>
+                            <div class="siderbar-item-link siderbar-menu-parent">
+                                <span>{{ item.name }}</span>
+                                <i class="siderbar-arrow siderbar-arrow-down"></i>
+                            </div>
+                            <ul class="siderbar-subitem">
+                                <li v-for="sub in item.subs" v-if="sub.show">
+                                    <a class="siderbar-item-link" href="javascript:void(0)" @click="jump(sub.path)">{{ sub.name }}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </template>
             </ul>
@@ -62,7 +61,31 @@
                     line-height: 56px;
                     padding: 0 32px;
                     display: block;
+                    font-size: 16px;
+                }
 
+                .siderbar-menu-parent {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .siderbar-arrow {
+                        background-size: 20px;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .siderbar-arrow-down {
+                        background-image: url('../../assets/images/arrow_down.png');
+                    }
+
+                    .siderbar-arrow-up {
+                        background-image: url('../../assets/images/arrow_up.png');
+                    }
+                }
+
+                .siderbar-subitem {
+                    padding: 0 18px;
                 }
             }
         }

@@ -5,8 +5,6 @@ import store from '../store';
 
 Vue.use(Router);
 
-// const {getTitle} = ...mapActions();
-
 // 2 levels.
 function generateRoutesFromMenu(menu = [], routes = []) {
     for (let i = 0, l = menu.length; i < l; i++) {

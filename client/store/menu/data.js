@@ -12,6 +12,120 @@ export default [
         },
     },
     {
+        name: '学校介绍',
+        show: true,
+        meta: {
+            title: '学校介绍'
+        },
+        subs: [
+            {
+                name: '学校介绍',
+                path: '/school/intro',
+                show: true,
+                component() {
+                    return import('@Views/scheme/scheme.vue');
+                },
+                meta: {
+                    title: '学校介绍',
+                    footerBar: false
+                }
+            }
+        ]
+    },
+    {
+        name: '基地',
+        show: true,
+        meta: {
+            title: '基地'
+        },
+        subs: [
+            {
+                name: '瑞金',
+                path: '/base/ruijin',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '瑞金',
+                    footerBar: true
+                }
+            },
+            {
+                name: '井冈山',
+                path: '/base/jinggangshan',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '井冈山',
+                    footerBar: true
+                }
+            },
+            {
+                name: '韶山',
+                path: '/base/shaoshan',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '韶山',
+                    footerBar: true
+                }
+            },
+            {
+                name: '上海',
+                path: '/base/shanghai',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '上海',
+                    footerBar: true
+                }
+            },
+            {
+                name: '遵义',
+                path: '/base/zunyi',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '遵义',
+                    footerBar: true
+                }
+            },
+            {
+                name: '延安',
+                path: '/base/yanan',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '延安',
+                    footerBar: true
+                }
+            },
+            {
+                name: '红旗渠',
+                path: '/base/hongqiqu',
+                show: true,
+                component() {
+                    return import('@Views/base/index.vue');
+                },
+                meta: {
+                    title: '红旗渠',
+                    footerBar: true
+                }
+            }
+        ]
+    },
+    {
         name: '培训方案',
         path: '/scheme',
         show: true,
