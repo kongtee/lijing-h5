@@ -7,11 +7,11 @@
                     <li v-if="item.show" class="siderbar-item">
                         <a class="siderbar-item-link" v-if="!item.subs" href="javascript:void(0)" @click="jump(item.path)">{{ item.name }}</a>
                         <div v-else>
-                            <div class="siderbar-item-link siderbar-menu-parent">
+                            <div class="siderbar-item-link siderbar-menu-parent" @click.stop="onCollapse(index)">
                                 <span>{{ item.name }}</span>
-                                <i class="siderbar-arrow siderbar-arrow-down"></i>
+                                <i class="siderbar-arrow siderbar-arrow" v-bind:class="{ active: menu[index].collapse }"></i>
                             </div>
-                            <ul class="siderbar-subitem">
+                            <ul class="siderbar-subitem" v-bind:class="{ active: menu[index].collapse }">
                                 <li v-for="sub in item.subs" v-if="sub.show">
                                     <a class="siderbar-item-link" href="javascript:void(0)" @click="jump(sub.path)">{{ sub.name }}</a>
                                 </li>
@@ -40,9 +40,9 @@
         z-index: 9999;
 
         .sidebar-menu {
-            height: 100%;
             background-color: #212121;
             width: 200px;
+            min-height: 100%;
 
             .sidebar-title {
                 background-color: #c40001;
@@ -75,17 +75,22 @@
                         height: 20px;
                     }
 
-                    .siderbar-arrow-down {
+                    .siderbar-arrow {
                         background-image: url('../../assets/images/arrow_down.png');
                     }
 
-                    .siderbar-arrow-up {
+                    .siderbar-arrow.active {
                         background-image: url('../../assets/images/arrow_up.png');
                     }
                 }
 
                 .siderbar-subitem {
+                    display: none;
                     padding: 0 18px;
+                }
+
+                .siderbar-subitem.active {
+                    display: block;
                 }
             }
         }
@@ -102,7 +107,8 @@
         },
         data() {
             return {
-                isReady: false
+                isReady: false,
+                menu: []
             };
         },
         computed: {
@@ -111,12 +117,26 @@
                 'menuItems'
             ])
         },
+        mounted() {
+            this.menu = [...this.menuItems];
+        },
         methods: {
             ...mapActions(['toggleSiderbar']),
+
             jump(path) {
                 this.$router.push({
                     path: path
                 });
+            },
+
+            onCollapse(index) {
+                if (this.menu[index].collapse) {
+                    this.$set(this.menu[index], 'collapse', false);
+                } else {
+                    this.$set(this.menu, index, {
+                        collapse: true
+                    });
+                }
             }
         }
     };

@@ -15,7 +15,8 @@ export default [
         name: '学校介绍',
         show: true,
         meta: {
-            title: '学校介绍'
+            title: '学校介绍',
+            collapse: true
         },
         subs: [
             {
