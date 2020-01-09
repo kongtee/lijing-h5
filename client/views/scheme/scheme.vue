@@ -50,17 +50,6 @@
         <div class="ruijin-wrap">
             <Ruijin></Ruijin>
         </div>
-        <div class="course-wrap">
-            <div class="news-header">
-                <header>课程</header>
-            </div>
-            <ul class="course-list">
-                <li class="course-item"><a class="course-content" href="#">教育系统专题课程</a></li>
-                <li class="course-item"><a class="course-content" href="#">农业系统专题课程</a></li>
-                <li class="course-item"><a class="course-content" href="#">农业系统专题课程</a></li>
-                <li class="course-item"><a class="course-content" href="#">政协系统专题课程</a></li>
-            </ul>
-        </div>
     </div>
 </template>
 
@@ -106,36 +95,6 @@
 
         .ruijin-wrap {
             margin-top: 30px;
-        }
-
-        .course-wrap {
-            margin-top: 30px;
-
-            .course-list {
-                display: flex;
-                flex-wrap: wrap;
-
-                .course-item {
-                    width: 50%;
-                    margin-top: 10px;
-
-                    .course-content {
-                        background-color: #eee;
-                        height: 30px;
-                        line-height: 30px;
-                        text-align: center;
-                        display: block;
-                    }
-                }
-
-                .course-item:nth-child(even) .course-content {
-                    margin-left: 6px;
-                }
-
-                .course-item:nth-child(odd) .course-content {
-                    margin-right: 6px;
-                }
-            }
         }
     }
 </style>

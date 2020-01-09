@@ -23,10 +23,22 @@ export default [
                 path: '/school/intro',
                 show: true,
                 component() {
-                    return import('@Views/scheme/scheme.vue');
+                    return import('@Views/school/intro.vue');
                 },
                 meta: {
                     title: '学校介绍',
+                    footerBar: false
+                }
+            },
+            {
+                name: '部分客户名录',
+                path: '/school/intro',
+                show: true,
+                component() {
+                    return import('@Views/scheme/scheme.vue');
+                },
+                meta: {
+                    title: '部分客户名录',
                     footerBar: false
                 }
             }
