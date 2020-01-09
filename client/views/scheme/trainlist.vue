@@ -1,25 +1,25 @@
 <template>
     <ul class="train-list">
         <li class="train-item">
-            <a class="train-item-btn train-item-two" href="#"></a>
+            <a class="train-item-btn train-item-two" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-three" href="#"></a>
+            <a class="train-item-btn train-item-three" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-four" href="#"></a>
+            <a class="train-item-btn train-item-four" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-five" href="#"></a>
+            <a class="train-item-btn train-item-five" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-six" href="#"></a>
+            <a class="train-item-btn train-item-six" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-seven" href="#"></a>
+            <a class="train-item-btn train-item-seven" href="#/scheme/detail"></a>
         </li>
         <li class="train-item">
-            <a class="train-item-btn train-item-custom" href="#"></a>
+            <a class="train-item-btn train-item-custom" href="#/scheme/detail"></a>
         </li>
     </ul>
 </template>

@@ -138,6 +138,18 @@ export default [
         }
     },
     {
+        name: '培训方案详情',
+        path: '/scheme/detail',
+        show: true,
+        component() {
+            return import('@Views/scheme/traindetail.vue');
+        },
+        meta: {
+            title: '培训方案详情',
+            footerBar: false
+        }
+    },
+    {
         name: '媒体介绍',
         path: '/media',
         show: true,
