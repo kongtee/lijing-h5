@@ -32,10 +32,10 @@ export default [
             },
             {
                 name: '部分客户名录',
-                path: '/school/intro',
+                path: '/school/customs',
                 show: true,
                 component() {
-                    return import('@Views/scheme/scheme.vue');
+                    return import('@Views/school/customs.vue');
                 },
                 meta: {
                     title: '部分客户名录',

@@ -42,7 +42,7 @@
 
 <script>
     export default {
-        name: "train"
+        name: "train-detail"
     }
 </script>
 
